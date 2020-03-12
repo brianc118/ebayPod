@@ -1,0 +1,39 @@
+{
+    "manifest_version": 2,
+    "name": "EbayPod",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.ebay.com.au/itm/*"
+            ],
+            "js": [
+                "product.js"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://pay.ebay.com.au/*"
+            ],
+            "js": [
+                "pay.js"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://www.ebay.com.au/b/eBay-Plus-Offers-Deals/bn_7115078161"
+            ],
+            "js": [
+                "reload.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "clipboardWrite",
+        "clipboard",
+        "clipboardRead"
+    ]
+}
